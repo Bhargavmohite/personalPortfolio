@@ -1,0 +1,20 @@
+[
+  {
+    "title": "E-Commerce Platform",
+    "category": "Web App",
+    "description": "A full-featured e-commerce platform with payment integration, inventory management, and real-time analytics.",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop"
+  },
+  {
+    "title": "Mobile Fitness App",
+    "category": "Mobile App",
+    "description": "Cross-platform fitness tracking application with workout planning, progress tracking, and social features.",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
+  },
+  {
+    "title": "Content Management System",
+    "category": "Web App",
+    "description": "Scalable CMS built with modern tech stack, featuring drag-and-drop editor and real-time collaboration.",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+  }
+]

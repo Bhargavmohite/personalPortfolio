@@ -37,23 +37,28 @@ export function Hero() {
   }, [displayedText, roleIndex, isDeleting])
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section
+      id='hero'
+      className='relative min-h-screen flex items-center justify-center overflow-hidden pt-20'
+    >
       {/* Background gradient blobs */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div className='absolute inset-0 -z-10'>
+        <div className='absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl'></div>
+        <div className='absolute bottom-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl'></div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block mb-6"
+          className='inline-block mb-6'
         >
-          <div className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full">
-            <span className="text-sm font-medium text-primary">Welcome to my Portfolio</span>
+          <div className='px-4 py-2 bg-primary/10 border border-primary/30 rounded-full'>
+            <span className='text-sm font-medium text-primary'>
+              Welcome to my Portfolio
+            </span>
           </div>
         </motion.div>
 
@@ -62,9 +67,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
+          className='text-5xl md:text-7xl font-bold tracking-tight mb-6'
         >
-          <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+          <span className='bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent'>
             Bhargav Mohite
           </span>
         </motion.h1>
@@ -74,11 +79,11 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="h-16 mb-8 flex items-center justify-center"
+          className='h-16 mb-8 flex items-center justify-center'
         >
-          <span className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <span className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent'>
             {displayedText}
-            <span className="animate-pulse">|</span>
+            <span className='animate-pulse'>|</span>
           </span>
         </motion.div>
 
@@ -87,9 +92,10 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
+          className='text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12'
         >
-          Crafting modern, scalable web and mobile applications with a passion for clean code and exceptional user experiences.
+          Crafting modern, scalable web and mobile applications with a passion
+          for clean code and exceptional user experiences.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -97,27 +103,30 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className='flex flex-col sm:flex-row gap-4 justify-center'
         >
           <Button
             onClick={() => {
-              document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })
+              document
+                .querySelector("#projects")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 text-lg py-6 px-8 rounded-lg"
+            className='bg-gradient-to-r from-primary to-accent text-white hover:opacity-90 text-lg py-6 px-8 rounded-lg'
           >
             View Projects
-            <ArrowRight className="ml-2" size={20} />
+            <ArrowRight className='ml-2' size={20} />
           </Button>
-          <Button
-            variant="outline"
-            className="text-lg py-6 px-8 rounded-lg border-2"
-            onClick={() => window.open('/resume.pdf', '_blank', 'noopener,noreferrer')}
-          >
-            <Download className="mr-2" size={20} />
-            Resume
-          </Button>
+          <a href='/Bhargav_Mohite_Resume_1.pdf' download>
+            <Button
+              variant='outline'
+              className='text-lg py-6 px-8 rounded-lg border-2'
+            >
+              <Download className='mr-2' size={20} />
+              Resume
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

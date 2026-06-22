@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from "next/navigation";
 
 const projectsData = [
   {
@@ -26,6 +28,13 @@ const projectsData = [
 ]
 
 export function Projects() {
+
+  const router = useRouter();
+
+  const navigateToViewProjects = () => {
+    router.push('/viewProjects');
+  };
+
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,9 +120,11 @@ export function Projects() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <button className="px-8 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg font-semibold transition-colors duration-300">
-            View All Projects
-          </button>
+          
+            <button className="px-8 py-3 border-2 border-primary text-primary hover:bg-primary/10 rounded-lg font-semibold transition-colors duration-300" onClick={navigateToViewProjects}>
+              View All Projects
+            </button>
+          
         </motion.div>
       </div>
     </section>

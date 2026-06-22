@@ -101,17 +101,7 @@ export function Navbar() {
                 >
                   <Moon size={16} />
                 </button>
-                <button
-                  onClick={() => setTheme('system')}
-                  className={`p-2 rounded transition-colors ${
-                    theme === 'system'
-                      ? 'bg-background text-foreground'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                  title="System"
-                >
-                  <Monitor size={16} />
-                </button>
+
               </div>
             )}
 
