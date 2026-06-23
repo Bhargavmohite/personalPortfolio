@@ -1,20 +1,46 @@
 [
   {
+    "slug": "e-commerce-platform",
     "title": "E-Commerce Platform",
     "category": "Web App",
     "description": "A full-featured e-commerce platform with payment integration, inventory management, and real-time analytics.",
-    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop"
+    "fullDescription": "A modern e-commerce platform designed to provide a seamless shopping experience. It includes secure payment integration, inventory management, analytics dashboard, and responsive design.",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
+    "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
+    "github": "https://github.com/yourusername/ecommerce-platform",
+    "demo": "https://ecommerce-demo.com",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=1200",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1200"
+    ]
   },
   {
+    "slug": "mobile-fitness-app",
     "title": "Mobile Fitness App",
     "category": "Mobile App",
     "description": "Cross-platform fitness tracking application with workout planning, progress tracking, and social features.",
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
+    "fullDescription": "A mobile fitness application that helps users track workouts, monitor progress, and stay connected with a fitness community.",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop",
+    "tech": ["React Native", "Expo", "Firebase"],
+    "github": "https://github.com/yourusername/fitness-app",
+    "demo": "https://fitness-demo.com",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200"
+    ]
   },
   {
+    "slug": "content-management-system",
     "title": "Content Management System",
     "category": "Web App",
     "description": "Scalable CMS built with modern tech stack, featuring drag-and-drop editor and real-time collaboration.",
-    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+    "fullDescription": "A collaborative CMS platform with advanced content editing capabilities, user roles, and workflow management.",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+    "tech": ["Next.js", "Node.js", "PostgreSQL"],
+    "github": "https://github.com/yourusername/cms",
+    "demo": "https://cms-demo.com",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200"
+    ]
   }
 ]

@@ -23,7 +23,7 @@ export default function Page() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main className='min-h-screen pt-28 pb-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -73,45 +73,52 @@ export default function Page() {
           {filteredProjects.length > 0 ? (
             <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
               {filteredProjects.map((project, index) => (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 25 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: index * 0.05,
-                  }}
-                  className='group overflow-hidden rounded-2xl border border-border bg-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300'
+                <Link
+                  key={project.slug}
+                  href={`/projects/${project.slug}`}
+                  className='block'
                 >
-                  {/* Image */}
-                  <div className='relative h-64 overflow-hidden'>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
-                    />
+                  <motion.div
+                    initial={{ opacity: 0, y: 25 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.05,
+                    }}
+                    className='group overflow-hidden rounded-2xl border border-border bg-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full'
+                  >
+                    {/* Image */}
+                    <div className='relative h-64 overflow-hidden'>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                      />
 
-                    <div className='absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center'>
-                      <div className='opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-white font-medium'>
-                        View Project
-                        <ArrowRight size={18} />
+                      <div className='absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center'>
+                        <div className='opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-white font-medium'>
+                          View Project
+                          <ArrowRight size={18} />
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Content */}
-                  <div className='p-6'>
-                    <span className='inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4'>
-                      {project.category}
-                    </span>
+                    {/* Content */}
+                    <div className='p-6'>
+                      <span className='inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4'>
+                        {project.category}
+                      </span>
 
-                    <h2 className='text-xl font-bold mb-3'>{project.title}</h2>
+                      <h2 className='text-xl font-bold mb-3'>
+                        {project.title}
+                      </h2>
 
-                    <p className='text-muted-foreground text-sm leading-6'>
-                      {project.description}
-                    </p>
-                  </div>
-                </motion.div>
+                      <p className='text-muted-foreground text-sm leading-6'>
+                        {project.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           ) : (

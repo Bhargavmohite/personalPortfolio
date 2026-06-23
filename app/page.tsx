@@ -10,7 +10,7 @@ import { Footer } from '@/components/footer'
 export default function Page() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <Hero />
         <About />
@@ -19,7 +19,7 @@ export default function Page() {
         <Testimonials />
         <Contact />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
